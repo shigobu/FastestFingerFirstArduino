@@ -2,6 +2,8 @@
 //#include <Arduino.h>
 FastestFingerFirstButton::FastestFingerFirstButton()
 {
+    status = ButtonPushedStatus::standby;
+
     button1Pin = PIN_IS_NOT_CONNECTED;
     button2Pin = PIN_IS_NOT_CONNECTED;
     button3Pin = PIN_IS_NOT_CONNECTED;

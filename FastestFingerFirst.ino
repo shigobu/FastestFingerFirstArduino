@@ -20,6 +20,9 @@ void setup()
     FFFB.PinSettingIncorrectButton(A4);
 
     FFFB.PinSettingSpeaker(A5);
+
+    //初期化完了、待受開始を知らせる
+    FFFB.PlayYesSound();
 }
 
 void loop()
