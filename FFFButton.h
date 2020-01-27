@@ -100,9 +100,9 @@ public:
     //スピーカーのピンを設定します。
     void PinSettingSpeaker(int pin);
 
-private:
     //ボタンが押された時の「ピンポン」音を再生します。
     void PlayYesSound();
+private:
     //正解音を再生します。
     void PlayCorrectSound();
     //不正解音を再生します。

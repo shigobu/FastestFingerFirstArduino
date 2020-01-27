@@ -40,12 +40,10 @@ void FastestFingerFirstButton::CheckIfButtonPushed()
     //正解ボタンの判定
     if (digitalRead(correctButtonPin) == LOW){
         PlayCorrectSound();
-        Reset();
     }
     //不正解ボタンの判定
     if (digitalRead(incorrectButtonPin) == LOW){
         PlayIncorrectSound();
-        Reset();
     }
     //リセットボタンの判定
     if (digitalRead(resetButtonPin) == LOW){
@@ -75,6 +73,9 @@ void FastestFingerFirstButton::CheckIfPlayerButtonPushed(int buttonPin, int LEDP
             digitalWrite(externalCommunicatingPin, HIGH);
         }        
         PlayYesSound();
+        if (externalCommunicatingPin > -1){
+            digitalWrite(externalCommunicatingPin, LOW);
+        }        
         status = stateusToSet;
     }
 }
