@@ -5,14 +5,6 @@
 
 */
 
-//エラーの内容を表します。
-enum ErrorStatus
-{
-    Ok,                     //正常終了
-    AlreadyUsedPin,         //指定されたpinは、すでに使用されています。
-    PinSettingIsUnfinished, //pin設定が未了です。
-};
-
 //現在の状態を表す列挙型
 enum ButtonPushedStatus
 {
